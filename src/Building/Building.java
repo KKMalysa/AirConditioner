@@ -42,27 +42,36 @@ public class Building {
             for (Room room : rooms){
                 System.out.println("temperature fall due to bad weather");
                 room.setCurrentTemperature(room.getCurrentTemperature()-1);
+                System.out.println(room.getCurrentTemperature());
             }
         else
             for (Room room : rooms){
                 System.out.println("temperature rise due to bad weather");
                 room.setCurrentTemperature(room.getCurrentTemperature()+1);
+                System.out.println(room.getCurrentTemperature());
             }
+            BuildingController.controlLoop();
 
     }
 
-    public void checkTemperature(){       // heat/coolRooms
-        for (Room room : rooms){
+
+    public void checkTemperature(){// heat/coolRooms
+        for (Room room : rooms) {
             room.temperatureKeeper();
         }
+        BuildingController.sleepFiveSecond();
+
     }
 
+
     public boolean reachTheTemperature(){ // areAllRoomsCool /heat
-        for (Room room : rooms){
-            if((int)room.getCurrentTemperature() != room.getTargetTemperature())
-                return false;
-        }
-        return true;
+            for (Room room : rooms) {
+
+                if ((int) room.getCurrentTemperature() != room.getTargetTemperature())
+                    return false;
+            }
+            return true;
+
     }
 
     @Override

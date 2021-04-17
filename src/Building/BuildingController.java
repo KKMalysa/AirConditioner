@@ -1,20 +1,24 @@
 package Building;
 
 public class BuildingController {
-    private Building building;
+    private static Building building;
 
     public BuildingController(Building building) {
         this.building = building;
     }
 
-    public void controlLoop() {
-        while (!building.reachTheTemperature()){
+    public static void controlLoop() {
+
+            while (!building.reachTheTemperature()) {
+                System.out.println(building);
+                building.checkTemperature();
+                sleepHalfSecond();
+            }
             System.out.println(building);
-            building.checkTemperature();
-            sleepOneSecond();
-        }
-        System.out.println(building);
-        System.out.println("Each room has reached its target temperature");
+            System.out.println("Each room has reached its target temperature");
+
+            sleepFiveSecond();
+
     }
 
     public void weatherLoop() {
@@ -25,14 +29,14 @@ public class BuildingController {
 
     }
 
-    private void sleepOneSecond() {
+    private static void sleepHalfSecond() {
         try {
-            Thread.sleep(1000);  // default value 1000
+            Thread.sleep(1);  // default value 1000
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
-    private void sleepFiveSecond() {
+     static void sleepFiveSecond() {
         try {
             Thread.sleep(5000);  // default value 1000
         } catch (InterruptedException e) {
