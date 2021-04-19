@@ -1,8 +1,8 @@
 package AirConditioner;
 
 public class ProAirConditioner implements AirConditioner {
-    private static final double COOL_TEMPERATURE = 4;
-    private static final double HEAT_TEMPERATURE = 3;
+    private static final double COOL_TEMPERATURE = 6;
+    private static final double HEAT_TEMPERATURE = 6;
 
 
     @Override

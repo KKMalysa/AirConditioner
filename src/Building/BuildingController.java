@@ -17,8 +17,6 @@ public class BuildingController {
             System.out.println(building);
             System.out.println("Each room has reached its target temperature");
 
-            sleepFiveSecond();
-
     }
 
     public void weatherLoop() {
@@ -31,14 +29,14 @@ public class BuildingController {
 
     private static void sleepHalfSecond() {
         try {
-            Thread.sleep(1);  // default value 1000
+            Thread.sleep(1000);  // default value 1000
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
-     static void sleepFiveSecond() {
+     public static void sleepFiveSecond() {
         try {
-            Thread.sleep(5000);  // default value 1000
+            Thread.sleep(9000);  // default value 1000
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
