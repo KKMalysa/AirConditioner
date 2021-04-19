@@ -5,6 +5,7 @@ project extended by new functionalities,
 - single Thread solution (not perfect)
 - multithread solution idea - would be better than single thread.
 (for now i think that design patern - observer would be redundant here)
+- multithread solution done
 
 
 ----------------------------------------------------------------------------------------------------
