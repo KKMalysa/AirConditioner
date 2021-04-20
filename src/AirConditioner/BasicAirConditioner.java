@@ -1,8 +1,8 @@
 package AirConditioner;
 
 public class BasicAirConditioner implements AirConditioner {
-    private static final double COOL_TEMPERATURE = 3;
-    private static final double HEAT_TEMPERATURE = 3;
+    private static final double COOL_TEMPERATURE = 2;
+    private static final double HEAT_TEMPERATURE = 2;
 
 
     @Override

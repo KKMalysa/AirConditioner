@@ -1,15 +1,15 @@
 package Building;
 
-import AirConditioner.AirConditioner;
+import AirConditioner.*;
 
-// i think it have to be singleton
+
+//perhaps it should be a singleton
 public class Room {
     private int number;
     private double currentTemperature;
     private double targetTemperature;
     private double cubature;
     private AirConditioner airConditioner; // assigned airConditioner
-    private Room instance = new Room();
 
 
     public Room(int number, double currentTemperature, double targetTemperature, double cubature, AirConditioner airConditioner) {
@@ -18,14 +18,6 @@ public class Room {
         this.targetTemperature = targetTemperature;
         this.cubature = cubature;
         this.airConditioner = airConditioner;
-    }
-
-    public Room() {
-
-    }
-
-    public Room getInstance() {
-        return instance;
     }
 
     public int getNumber() {
@@ -79,6 +71,11 @@ public class Room {
                 '}';
     }
 
+    /**
+     * @airConditioner.cooling - decreasing currentTemperature in a single Room
+     *
+     * @airConditioner.heating - increasing currentTemperature in a single Room
+     */
     public void temperatureKeeper(){
         if(currentTemperature > targetTemperature){
             currentTemperature = airConditioner.cooling(currentTemperature, cubature);
