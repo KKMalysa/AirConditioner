@@ -9,7 +9,7 @@ project extended by new functionalities,
 
 
 ----------------------------------------------------------------------------------------------------
-treść zadania (polecam javastart.pl)
+treść zadania
 Napisz program, który będzie symulował regulację temperatury w pomieszczeniach pewnego budynku.
 
 Budynek składa się z 4 pomieszczeń, a każde pomieszczenie może posiadać niezależny klimatyzator jednego z dwóch typów:
