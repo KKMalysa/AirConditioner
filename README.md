@@ -7,10 +7,11 @@ project extended by new functionalities,
 (for now i think that design patern - observer would be redundant here)
 - multithread solution done
 - some issues with synchronization
+- another idea with singleton and observer
 
 
 ----------------------------------------------------------------------------------------------------
-treść zadania
+TREŚĆ ZADANIA:
 Napisz program, który będzie symulował regulację temperatury w pomieszczeniach pewnego budynku.
 
 Budynek składa się z 4 pomieszczeń, a każde pomieszczenie może posiadać niezależny klimatyzator jednego z dwóch typów:
